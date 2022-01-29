@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>{{default}}</p>
+    <div>
+        <form method="POST" action="/suma">
+            <button type="submit" id="contador">Click</button>
+        </form>
+        <form method="POST" action="/limpiar">
+            <button type="submit" id="reset">Reset</button>
+        </form>
+    </div>
+    <div>
+        <form method="POST" action="/sumamasx">
+            <button id="submit" id="suma2">Agrega +{{session['tunumero']}}</button> 
+        </form>
+    </div>
+    <div>
+        <form method="POST" action="/tunumero">
+            <label for="tunumero">
+                    Ingresa un número
+            </label>
+                <input type="text" id="tunumero" name="tunumero">
+        </form>        
+    </div>
+    <div>
+        <form method="GET" action="/">
+            <h3>Numero de veces que visito la pagina: {{session['visits']}}</h3>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>{{default}}</p>
+    <div>
+        <form method="POST" action="/suma">
+            <button type="submit" id="contador">Click</button>
+        </form>
+        <form method="POST" action="/limpiar">
+            <button type="submit" id="reset">Reset</button>
+        </form>
+    </div>
+    <div>
+        <form method="POST" action="/suma2">
+            <button id="submit" id="suma2">Agrega +2</button>            
+        </form>
+    </div>
+    <form>
+            <div>
+                <label for="tunumero">
+                    Ingresa un número
+                </label>
+                <input type="text" id="tunumero" name="tunumero">
+            </div>
+    </form>
+    <!--
+    <div>
+        <p>{{comprobar}}</p>
+
+        <a href="/suma2">
+            <button>+2</button>
+        </a>
+    </div>
+    -->
